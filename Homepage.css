@@ -168,7 +168,8 @@ input::selection {
 #bestseller>h3,
 #exulsive>h3,
 .popCat>h3,
-#discount>h3 {
+#discount>h3,
+#endAd>div>h3 {
     text-align: center;
     font-weight: 900;
     font-size: 22px;
@@ -250,4 +251,9 @@ input::selection {
     text-decoration: underline;
     margin: 0px;
     color: #5ca3a6;
+}
+
+.endAd>img {
+    width: 100%;
+    margin: 10px;
 }
