@@ -1,0 +1,253 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    width: 98.18%;
+
+}
+
+#Header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: white;
+
+}
+
+a {
+    text-decoration: none;
+    font-size: 15px;
+    color: black;
+
+
+}
+
+#topNavbar {
+    display: flex;
+    justify-content: space-around;
+    background-color: #eee;
+    padding: 5px;
+
+}
+
+.left>a {
+    margin-left: 10px;
+    text-decoration: none;
+    font-size: 10px;
+    font-weight: 600;
+
+}
+
+.right>a {
+    margin-left: 10px;
+    text-decoration: none;
+    font-size: 10px;
+    font-weight: 600;
+
+}
+
+.search {
+    width: 25%;
+    background: #eaeaea;
+    color: rgba(0, 0, 0, .5);
+    border: 1px solid transparent;
+    border-radius: 8px;
+    padding: 10px;
+    font-weight: 600;
+
+}
+
+#searchLogo>img {
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+
+}
+
+input::selection {
+    background-color: white;
+    color: black;
+
+}
+
+.moblogo {
+    width: 20px;
+
+}
+
+#midNavbar {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    margin: auto;
+    box-sizing: border-box;
+    margin-top: 5px;
+
+}
+
+.midMid {
+    font-size: 17px;
+    padding: 10px;
+    margin-right: 20%;
+
+}
+
+.midMid>a {
+    margin-left: 25px;
+    margin: 0px 10px 0px 10px;
+    font-size: 12px;
+    font-weight: 600;
+
+}
+
+#bottomNavbar>a:hover,
+.midMid>a:hover {
+    border-bottom: 4px solid yellow;
+}
+
+.midRight {
+    border-left: 1px solid black;
+    padding: 10px;
+
+}
+
+#bottomNavbar {
+    display: flex;
+    justify-content: space-around;
+    width: 470px;
+    margin: auto;
+
+
+}
+
+#bottomNavbar>a {
+    font-weight: 600;
+}
+
+.imglogo {
+    width: 150px;
+    padding: 10px;
+
+}
+
+#offerSection>a>img {
+    width: 32%;
+    margin: 8px;
+}
+
+.ad1>a>img {
+    width: 100%;
+    margin: 10px;
+}
+
+.ad2 {
+    display: flex;
+    width: 80%;
+    margin: auto;
+
+}
+
+.ad2>a {
+    margin: 10px;
+}
+
+.ad2>a>img {
+    width: 100%;
+    border-radius: 15px;
+
+}
+
+.pSize {
+    font-size: 13px;
+    font-weight: 900;
+    text-align: center;
+}
+
+#bestseller>h3,
+#exulsive>h3,
+.popCat>h3,
+#discount>h3 {
+    text-align: center;
+    font-weight: 900;
+    font-size: 22px;
+    margin-bottom: 0px;
+}
+
+.exad1 {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.exad1>a {
+    margin: 10px;
+}
+
+.exad1>div>a>img {
+    width: 98%;
+    margin: 10px;
+}
+
+.popAd {
+    display: flex;
+    width: 80%;
+    margin: auto;
+}
+
+.popAd>div>a>img {
+    width: 80%;
+    margin: 5%;
+    border-radius: 10px;
+}
+
+.dscOffers {
+    display: flex;
+}
+
+.dsAd {
+    display: flex;
+    width: 100%;
+}
+
+.dsAd>div>a>img {
+    width: 95%;
+    margin: 5%;
+    border-radius: 5px;
+}
+
+.menSection {
+    display: flex;
+    width: 80%;
+    margin: auto;
+}
+
+.menSection>div {
+    margin: 1%;
+}
+
+.menSection>div>img {
+    width: 100%;
+    margin: 10px;
+}
+
+.menSection>div>span:nth-child(2) {
+    text-decoration: line-through;
+    margin: 0px 10px 0px 20px;
+    font-size: 15px;
+
+}
+
+.menSection>div>span>b {
+    margin: 0px 0px 0px 5px;
+    font-size: large;
+
+}
+
+#view>a>h3 {
+    font-size: 14px;
+    text-align: center;
+    text-decoration: underline;
+    margin: 0px;
+    color: #5ca3a6;
+}

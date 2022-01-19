@@ -10,11 +10,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="Homepage.css"> -->
     <style>
         * {
             box-sizing: border-box;
-
-
         }
 
         body {
@@ -34,6 +33,7 @@
         a {
             text-decoration: none;
             font-size: 15px;
+            color: black;
 
 
         }
@@ -179,9 +179,11 @@
             text-align: center;
         }
 
+        #bestseller>h3,
         #exulsive>h3,
         .popCat>h3,
-        #discount>h3 {
+        #discount>h3,
+        #endAd>div>h3 {
             text-align: center;
             font-weight: 900;
             font-size: 22px;
@@ -218,8 +220,56 @@
             display: flex;
         }
 
-        .dscOffers>div {
-            width: 10%;
+        .dsAd {
+            display: flex;
+            width: 100%;
+        }
+
+        .dsAd>div>a>img {
+            width: 95%;
+            margin: 5%;
+            border-radius: 5px;
+        }
+
+        .menSection {
+            display: flex;
+            width: 80%;
+            margin: auto;
+        }
+
+        .menSection>div {
+            margin: 1%;
+        }
+
+        .menSection>div>img {
+            width: 100%;
+            margin: 10px;
+        }
+
+        .menSection>div>span:nth-child(2) {
+            text-decoration: line-through;
+            margin: 0px 10px 0px 20px;
+            font-size: 15px;
+
+        }
+
+        .menSection>div>span>b {
+            margin: 0px 0px 0px 5px;
+            font-size: large;
+
+        }
+
+        #view>a>h3 {
+            font-size: 14px;
+            text-align: center;
+            text-decoration: underline;
+            margin: 0px;
+            color: #5ca3a6;
+        }
+
+        .endAd>img {
+            width: 100%;
+            margin: 10px;
         }
     </style>
 </head>
@@ -228,9 +278,10 @@
 
     <!-- <************************************************Header **************************************> -->
 
-    <!-- <************************************************Top Navbar **************************************> -->
-
     <div id="Header">
+
+        <!-- <************************************************Top Navbar **************************************> -->
+
         <div id="topNavbar">
             <!-------------------------Left Part ------------------------------>
             <div class="left">
@@ -294,13 +345,13 @@
             <a href=""><img
                     src="https://images.bewakoof.com/uploads/grid/app/DOTD-IS-BACK-HOMEPAGE-BANNERS-18jan-M-1642494905.gif"
                     alt=""></a>
-            <a href=""><img src="https://images.bewakoof.com/uploads/grid/app/oof-sale-tshirts-1x1-1642507163.jpg"
-                    alt=""></a>
+            <!-- <a href=""><img src="https://images.bewakoof.com/uploads/grid/app/oof-sale-tshirts-1x1-1642507163.jpg"
+                    alt=""></a> -->
             <a href=""><img src="https://images.bewakoof.com/uploads/grid/app/oof-sale-22-1642179919.gif" alt=""></a>
             <a href=""><img
                     src="https://images.bewakoof.com/uploads/grid/app/Static-Banner-1-1-Last-Time-On-Discount-Sweatshirts-Men-1642480716.gif"
                     alt=""></a>
-            <a href=""><img src="https://images.bewakoof.com/uploads/grid/app/winter-men-oof-1641996162.jpg" alt=""></a>
+            <!-- <a href=""><img src="https://images.bewakoof.com/uploads/grid/app/winter-men-oof-1641996162.jpg" alt=""></a> -->
         </div>
         <!-- ******************************************************Ad1 Section****************************************** -->
         <div class="ad1">
@@ -428,21 +479,82 @@
                 </a>
             </div>
         </div>
+
+        <!-- ******************************************************DISCOUNT PE DISCOUNT ****************************************** -->
+
         <div id="discount">
             <h3>DISCOUNT PE DISCOUNT</h3>
         </div>
         <div class="dscOffers">
-            <div><a href=""><img
-                        src="https://images.bewakoof.com/uploads/grid/app/buy-3-men-oof-3for899-rev-1642581701.jpg"
-                        alt=""></a></div>
-            <div><a href=""><img src="https://images.bewakoof.com/uploads/grid/app/b2g1-mid-banner-oof-1641996154.jpg"
-                        alt=""></a></div>
-            <div><a href=""><img
-                        src="https://images.bewakoof.com/uploads/grid/app/style-promotion-puffer-jacket-mid-size-banner-men-1641552781.jpg"
-                        alt=""></a></div>
-            <div><a href=""><img src="https://images.bewakoof.com/uploads/grid/app/cosmos-oof-banner-2-1642430265.jpg"
-                        alt=""></a></div>
+            <div class="dsAd">
+                <div><a href=""><img
+                            src="https://images.bewakoof.com/uploads/grid/app/buy-3-men-oof-3for899-rev-1642581701.jpg"
+                            alt=""></a></div>
+                <div><a href=""><img
+                            src="https://images.bewakoof.com/uploads/grid/app/b2g1-mid-banner-oof-1641996154.jpg"
+                            alt=""></a></div>
+                <div><a href=""><img
+                            src="https://images.bewakoof.com/uploads/grid/app/style-promotion-puffer-jacket-mid-size-banner-men-1641552781.jpg"
+                            alt=""></a></div>
+                <div><a href=""><img
+                            src="https://images.bewakoof.com/uploads/grid/app/cosmos-oof-banner-2-1642430265.jpg"
+                            alt=""></a></div>
+            </div>
         </div>
+        <!-- ****************************************************** BESTSELLERS FOR MEN & WOMEN *********************************** -->
+        <div id="bestseller">
+            <h3>BESTSELLERS FOR MEN & WOMEN</h3>
+        </div>
+        <div class="menSection">
+            <div><img src="https://images.bewakoof.com/t320/gotham-city-full-sleeve-t-shirt-463720-1641536964-1.jpg"
+                    alt="">
+                <span> 899 </span>
+                <span> <b>&#x20B9 499</b> </span>
+            </div>
+            <div><img
+                    src="https://images.bewakoof.com/t320/deadpool-screwed-half-sleeve-t-shirt-464011-1641892410-1.jpg"
+                    alt="">
+                <span> 1299 </span>
+                <span> <b>&#x20B9 799</b> </span>
+            </div>
+            <div><img
+                    src="https://images.bewakoof.com/t320/deadpool-screwed-half-sleeve-t-shirt-463977-1641892306-1.jpg"
+                    alt="">
+                <span> 999 </span>
+                <span> <b>&#x20B9 599</b> </span>
+            </div>
+            <div><img
+                    src="https://images.bewakoof.com/t320/so-normal-is-boring-garfield-boyfriend-t-shirt-459643-1640954419-1.jpg"
+                    alt="">
+                <span> 799 </span>
+                <span> <b>&#x20B9 499</b> </span>
+            </div>
+            <div><img
+                    src="https://images.bewakoof.com/t320/weekend-mood-tom-tjl-women-s-half-sleeve-printed-t-shirt-354953-1621409950.jpg"
+                    alt="">
+                <span> 999 </span>
+                <span> <b>&#x20B9 399</b> </span>
+            </div>
+            <div><img src="https://images.bewakoof.com/t320/know-your-power-boyfriend-t-shirt-464871-1642404547-1.jpg"
+                    alt="">
+                <span> 999 </span>
+                <span> <b>&#x20B9 399</b> </span>
+            </div>
+        </div>
+        <div id="view"><a href="">
+                <h3>VIEW All</h3>
+            </a></div>
+
+        <!------------------------------------------ Bottom Wear -------------------------------------------------->
+
+        <div id="endAd">
+            <div>
+                <h3>Customize your T-shirts</h3>
+            </div>
+        </div>
+        <div class="endAd"><img
+                src="https://images.bewakoof.com/uploads/grid/app/OOFsale-Landing-desktop-men-customisation-noprice-1642501282.jpg"
+                alt=""></div>
     </div>
 
     <!-- ****************************************************** Footer Section****************************************** -->
