@@ -12,6 +12,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <!-- <link rel="stylesheet" href="Homepage.css"> -->
     <style>
+
+        /* Header CSS Start */
+
         * {
             box-sizing: border-box;
         }
@@ -118,13 +121,18 @@
 
         #bottomNavbar>a:hover,
         .midMid>a:hover {
-            border-bottom: 4px solid yellow;
+            border-bottom: 4px solid #fdd835;
         }
 
         .midRight {
             border-left: 1px solid black;
             padding: 10px;
 
+        }
+
+        .midRight>a>img {
+            width: 24px;
+            margin: 0.00100%;
         }
 
         #bottomNavbar {
@@ -145,6 +153,8 @@
             padding: 10px;
 
         }
+
+        /* Header CSS END */
 
         #offerSection>a>img {
             width: 32%;
@@ -239,11 +249,19 @@
 
         .menSection>div {
             margin: 1%;
+
         }
 
         .menSection>div>img {
-            width: 100%;
+            width: 95%;
             margin: 10px;
+            transition-timing-function: ease-in-out;
+        }
+
+        .menSection>div>img:hover {
+            width: 100%;
+            transition: width 0.5s;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
         }
 
         .menSection>div>span:nth-child(2) {
@@ -271,6 +289,91 @@
             width: 100%;
             margin: 10px;
         }
+
+        /* Footer CSS Start */
+
+        #footer {
+            background-color: #181818;
+        }
+
+        #footer>div>img {
+            width: 10%;
+        }
+
+        .customer>h5 {
+            color: yellow;
+            margin: 0px 40px 0px 0px;
+        }
+
+        .cusDetails,
+        .logo {
+            display: flex;
+            margin: 0px 0px 0px 15%
+        }
+
+        .customer>ul>li {
+            color: white;
+            font-size: 12px;
+            list-style-type: none;
+            margin-left: -8%;
+        }
+
+        .customer>ul>li>img {
+            width: 5%;
+        }
+
+        #icons {
+            width: 35%;
+        }
+
+        .input>h5 {
+            color: yellow;
+            margin-top: 0px;
+        }
+
+        .input>ul {
+            display: flex;
+            margin-left: -12%;
+        }
+
+        .input>ul>li {
+            list-style-type: none;
+        }
+
+        #mailName {
+            width: 90%;
+            height: 35px;
+            background: #80808000;
+            color: white;
+        }
+
+        #subBtn {
+            width: 100%;
+            height: 35px;
+            background-color: #fdd835;
+            color: black;
+        }
+
+        #paymentgateway{
+            display: flex;
+        }
+
+        #paymentgateway>ul {
+            color: white;
+            list-style-type: none;
+        }
+
+        #paymentgateway>ul>li{
+            font-size: 13px;
+            margin-bottom: 1%;
+        }
+
+        #paymentgateway>ul>li>img {
+            width: 1%;
+            filter: invert(1);
+        }
+
+
     </style>
 </head>
 
@@ -318,9 +421,13 @@
 
             <!------------------------------------------ Right Part -------------------------------------------------->
             <div class="midRight">
-                <a href="">Profile</a>
-                <a href="">Wishlist</a>
-                <a href="">Cart</a>
+                <a href=""><img src="https://cdn2.iconfinder.com/data/icons/e-commerce-line-4-1/1024/user4-128.png"
+                        alt=""></a>
+                <a href=""><img src="https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678087-heart-128.png"
+                        alt=""></a>
+                <a href=""><img
+                        src="https://cdn1.iconfinder.com/data/icons/shopping-346/24/buy-bag-cart-shop-shopping-128.png"
+                        alt=""></a>
             </div>
         </div>
         <hr>
@@ -560,7 +667,69 @@
     <!-- ****************************************************** Footer Section****************************************** -->
 
     <div id="footer">
-
+        <!------------------------------------------ Bewakoof Logo -------------------------------------------------->
+        <div class="logo">
+            <img src="https://i2.wp.com/www.indiaretailing.com/wp-content/uploads/2021/07/Bewakoof-logo.jpg?fit=1334%2C633&ssl=1"
+                alt="">
+        </div>
+        <!-- ****************************************************** Customer Service ****************************************** -->
+        <div class="cusDetails">
+            <div class="customer">
+                <h5>CUSTOMER SERVICE</h5>
+                <ul>
+                    <li>Contact Us</li>
+                    <li>Track Order</li>
+                    <li>Return Order</li>
+                    <li>Cancel Order</li>
+                </ul>
+            </div>
+            <div class="customer">
+                <h5>COMPANY</h5>
+                <ul>
+                    <li>About Us</li>
+                    <li>We're Hiring</li>
+                    <li>Terms & Conditions</li>
+                    <li>Privacy Policy</li>
+                    <li>Blog</li>
+                </ul>
+            </div>
+            <div class="customer" id="icons">
+                <h5>CONNECT WITH US</h5>
+                <ul>
+                    <li><img src="https://cdn1.iconfinder.com/data/icons/social-media-color-1/128/yumminky-social-media-01-128.png"
+                            alt="">
+                        4.7M People Like this</li>
+                    <li><img src="https://cdn2.iconfinder.com/data/icons/social-media-applications/64/social_media_applications_3-instagram-128.png"
+                            alt=""> 1M Followers</li>
+                    <li><img src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Twitter3_colored_svg-128.png"
+                            alt=""> <img
+                            src="https://cdn3.iconfinder.com/data/icons/modern-social-free/1024/Pinterest-128.png"
+                            alt=""> <img
+                            src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Snapchat_colored_svg-128.png"
+                            alt=""> <img
+                            src="https://cdn0.iconfinder.com/data/icons/aami-apple-devices/64/apple-29-128.png" alt="">
+                    </li>
+                </ul>
+            </div>
+            <div class="input">
+                <h5>KEEP UP TO DATE</h5>
+                <ul>
+                    <li> <input id="mailName" type="email" placeholder="Enter Email Id" required></li>
+                    <li><input id="subBtn" type="submit" value="SUBSCRIBE"></li>
+                </ul>
+            </div>
+        </div>
+        <br>
+        <br>
+    <div id="paymentgateway">
+        <ul>
+            <li><img src="https://cdn0.iconfinder.com/data/icons/commerce-line-1/512/comerce_delivery_shop_business-24-128.png" alt=""> 15 Days return policy</li>
+            <li><img src="https://cdn4.iconfinder.com/data/icons/essential-app-2/16/cash-money-coin-value-128.png" alt=""> Cash on delivery*</li>
+        </ul>
+    </div>
+    <div>
+        <h5>DOWNLOAD THE APP</h5>
+    </div>
     </div>
 </body>
 <script>
