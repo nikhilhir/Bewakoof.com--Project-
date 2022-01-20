@@ -1,4 +1,143 @@
-    
+/*header design */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  
+  width: 99%;
+
+}
+
+#Header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: white;
+
+}
+
+a {
+  text-decoration: none;
+  font-size: 15px;
+  color: black;
+
+
+}
+
+#topNavbar {
+  display: flex;
+  justify-content: space-around;
+  background-color: #eee;
+  padding: 5px;
+
+}
+
+.left>a {
+  margin-left: 10px;
+  text-decoration: none;
+  font-size: 10px;
+  font-weight: 600;
+
+}
+
+.right>a {
+  margin-left: 10px;
+  text-decoration: none;
+  font-size: 10px;
+  font-weight: 600;
+
+}
+
+.search {
+  width: 25%;
+  background: #eaeaea;
+  color: rgba(0, 0, 0, .5);
+  border: 1px solid transparent;
+  border-radius: 8px;
+  padding: 10px;
+  font-weight: 600;
+
+}
+
+#searchLogo>img {
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+
+}
+
+input::selection {
+  background-color: white;
+  color: black;
+
+}
+
+.moblogo {
+  width: 20px;
+
+}
+
+#midNavbar {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  margin: auto;
+  box-sizing: border-box;
+  margin-top: 5px;
+
+}
+
+.midMid {
+  font-size: 17px;
+  padding: 10px;
+  margin-right: 20%;
+
+}
+
+.midMid>a {
+  margin-left: 25px;
+  margin: 0px 10px 0px 10px;
+  font-size: 12px;
+  font-weight: 600;
+
+}
+
+#bottomNavbar>a:hover,
+.midMid>a:hover {
+  border-bottom: 4px solid #fdd835;
+}
+
+.midRight {
+  border-left: 1px solid black;
+  padding: 10px;
+
+}
+
+.midRight>a>img {
+  width: 24px;
+  margin: 0.00100%;
+}
+
+#bottomNavbar {
+  display: flex;
+  justify-content: space-around;
+  width: 470px;
+  margin: auto;
+
+
+}
+
+#bottomNavbar>a {
+  font-weight: 600;
+}
+
+.imglogo {
+  width: 150px;
+  padding: 10px;
+
+}
+
   /*title design    */
         .main-body{
             width : 93%;
