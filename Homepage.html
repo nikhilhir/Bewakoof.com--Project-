@@ -12,7 +12,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <!-- <link rel="stylesheet" href="Homepage.css"> -->
     <style>
-
         /* Header CSS Start */
 
         * {
@@ -354,26 +353,29 @@
             color: black;
         }
 
-        #paymentgateway{
+        #paymentgateway {
             display: flex;
         }
 
-        #paymentgateway>ul {
+        #paymentgateway>div>h5 {
+            color: yellow;
+        }
+
+        #paymentgateway>div>ul {
             color: white;
             list-style-type: none;
         }
 
-        #paymentgateway>ul>li{
+        #paymentgateway>div>ul>li {
             font-size: 13px;
-            margin-bottom: 1%;
+            margin-bottom: 5%;
+            margin-top: 5%;
         }
 
-        #paymentgateway>ul>li>img {
-            width: 1%;
+        #paymentgateway>div>ul>li>img {
+            width: 5%;
             filter: invert(1);
         }
-
-
     </style>
 </head>
 
@@ -721,15 +723,20 @@
         </div>
         <br>
         <br>
-    <div id="paymentgateway">
-        <ul>
-            <li><img src="https://cdn0.iconfinder.com/data/icons/commerce-line-1/512/comerce_delivery_shop_business-24-128.png" alt=""> 15 Days return policy</li>
-            <li><img src="https://cdn4.iconfinder.com/data/icons/essential-app-2/16/cash-money-coin-value-128.png" alt=""> Cash on delivery*</li>
-        </ul>
-    </div>
-    <div>
-        <h5>DOWNLOAD THE APP</h5>
-    </div>
+        <div id="paymentgateway">
+            <div>
+                <ul>
+                    <li><img src="https://cdn0.iconfinder.com/data/icons/commerce-line-1/512/comerce_delivery_shop_business-24-128.png"
+                            alt=""> 15 Days return policy</li>
+                    <li><img src="https://cdn4.iconfinder.com/data/icons/essential-app-2/16/cash-money-coin-value-128.png"
+                            alt=""> Cash on delivery*</li>
+                </ul>
+            </div>
+            <div>
+                <h5>DOWNLOAD THE APP</h5>
+            </div>
+        </div>
+
     </div>
 </body>
 <script>
