@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessories/Bewakoof</title>
+    <link rel="stylesheet" href="productstyle.css">
+</head>
+<body>
+  <div class="main-body">
+    <div class="currentpage">
+      <p><a href="">Home </a>/  Accessories</p>
+      <br>
+      <br>
+      <h1 class="title">Accessories</h1>
+    </div>
+    <h3>FILTER</h3>
+    <div class="sub-body">
+           <div class="filter-items">
+            <div class="select">
+              <select>
+                <option value="">Category</option>
+                <option value="">T-shirt</option>
+                <option value="">Boxer</option>
+                <option value="">Kurta</option>
+                <option value="">Shirt</option>
+                <option value="">Shorts</option>
+                <option value="">jacket</option>
+                <option value="">Joggers</option>
+              </select>
+             </div>
+             <div class="select">
+             <select name="" id="">
+               <option value="" class="">Size</option>
+                <option value="" class="">XS</option>
+                <option value="" class="">S</option>
+                <option value="" class="">M</option>
+                <option value="" class="">L</option>
+                <option value="" class="">XL</option>
+                <option value="" class="">2XL</option>
+                <option value="" class="">3XL</option>
+                <option value="" class="">4XL</option>
+             </select>
+            </div>
+             <div class="select">
+             <select name="" id="">
+               <option value="" class="">Brand</option>
+               <option value="" class="">Bewakoof</option>
+               <option value="" class="">Campus Sutra</option>
+               <option value="" class="">Hangup</option>
+               <option value="" class="">Breakbounce</option>
+               <option value="" class="">See Designs</option>
+               <option value="" class="">Fugazee</option>
+               <option value="" class="">The bear house</option>
+               <option value="" class="">Alcis</option>
+             </select>
+            </div>
+           <div class="select">
+             <select name="" id="">
+               <option value="" class="">Design</option>
+               <option value="" class="">Solid</option>
+               <option value="" class="">printed</option>
+               <option value="" class="">Graphic print</option>
+               <option value="" class="">Plain</option>
+               <option value="" class="">Typography</option>
+               <option value="" class="">AOP</option>
+               <option value="" class="">Washe</option>
+               <option value="" class="">Checked</option>
+             </select>
+           </div>
+           <div class="select">
+             <select name="" id="">
+               <option value="" class="">Fit</option>
+               <option value="" class="">Regular fit</option>
+               <option value="" class="">Relaxed Fit</option>
+               <option value="" class="">Slim Fit</option>
+               <option value="" class="">Oversized</option>
+               <option value="" class="">Loose fit</option>
+               <option value="" class="">Trappered fIt</option>
+               <option value="" class="">Skinny Fit</option>
+               <option value="" class="">Regular</option>
+             </select>
+           </div>
+           <div class="select">
+             <select name="" id="">
+               <option value="" class="">Sleeve</option>
+               <option value="" class="">Full sleeve</option>
+               <option value="" class="">half Sleeve</option>
+               <option value="" class="">Sleeveless</option>
+               <option value="" class="">na</option>
+               <option value="" class="">Short Sleeve</option>
+               <option value="" class="">Long Sleeve</option>
+               <option value="" class="">raglan sleeve</option>
+               <option value="" class="">#/4th Sleeve</option>
+             </select>
+           </div>
+             <div class="select">
+             <select name="" id="">
+               <option value="" class="">Neck</option>
+               <option value="" class="">mandarin color</option>
+               <option value="" class="">Round NecK</option>
+               <option value="" class="">Shirt Collar</option>
+               <option value="" class="">Polp</option>
+               <option value="" class="">Spread colar</option>
+               <option value="" class="">lapel Collar</option>
+               <option value="" class="">Hood</option>
+               <option value="" class="">Henley Neck</option>
+             </select>
+           </div>
+           </div>
+    
+          <div class="product-items">
+
+          </div> 
+    </div>    
+  </div>
+    
+</body>
+</html>
+<script>
+    var Accessories = JSON.parse(localStorage.getItem("Accessories")) ||[];
+    var Wishlist = JSON.parse(localStorage.getItem("Wishlist"))|| [];
+    var PreviewArr = [];
+
+ Accessories.map(function (data){
+  var div = document.createElement("div");
+      div.setAttribute("class","product")
+
+      var div1 = document.createElement("div");
+      div1.setAttribute("class", "product-content")
+
+      var div3 = document.createElement("div");
+      div3.setAttribute("class","product-img")
+
+      var image = document.createElement("img");
+      image.setAttribute("src", data.image_url);
+
+      div3.append(image);
+
+      var div4 = document.createElement("div");
+      div4.setAttribute("class","product-btns;");
+
+      var btn = document.createElement("button");
+      btn.setAttribute("class", "btn-cart");
+     
+      var btndiv = document.createElement("img");
+      btndiv.setAttribute("src","https://cdn2.iconfinder.com/data/icons/media-player-ui/512/Media-Icon-25-512.png");
+
+      btn.append(btndiv);
+
+      div4.append(btn);
+      div1.append(div3,div4);
+
+      var div5 = document.createElement("div");
+      div5.setAttribute("class","product-info");
+
+      var div6 = document.createElement("div");
+      div6.setAttribute("class","product-info-top");
+
+      var h2 = document.createElement("h3");
+      h2.setAttribute("class","sm-title");
+      h2.textContent = data.name;
+
+      div6.append(h2);
+
+      var div7 = document.createElement("div");
+      div7.setAttribute("class", "product-price");
+
+       var span1 = document.createElement("span");
+       span1.setAttribute("class","product-price-info");
+
+      var p1 = document.createElement("h3");
+      p1.textContent = data.price;
+
+      span1.append(p1);
+      var span2 = document.createElement("span");
+       span2.setAttribute("class","product-price-info");
+  
+      var p2 = document.createElement("p");
+      p2.textContent = data.strikedoffprice;
+
+      span2.append(p2);
+      div7.append(span1, span2)
+      div5.append(div6, div7);
+
+      var div8 = document.createElement("div");
+      div8.setAttribute("class","off-info");
+
+      var h3 = document.createElement("h5");
+      h3.setAttribute("class","sm-title");
+      h3.textContent = "25% off for TriBe Members";
+
+      div8.append(h3);
+      div.append(div1, div5, div8);
+
+      btn.addEventListener("click",function(){
+        addToWishlist(data);
+      });
+  
+     div3.addEventListener("click", function(){
+       previewpage(data);
+     });
+
+      document.querySelector(".product-items").append(div);
+
+    });
+
+    function addToWishlist(data){
+        Wishlist.push(data);
+        localStorage.setItem("CartItems", JSON.stringify(Wishlist));
+        alert("added successfully");
+    } 
+
+    function previewpage(data){
+         PreviewArr.push(data);
+         localStorage.setItem("PreviewArr", JSON.stringify(PreviewArr));
+    }
+
+    var info2 = [
+    {
+      image_url:
+        "https://images.bewakoof.com/t320/peanuts-happy-dance-printed-small-backpack-458066-1640862632-1.jpg",
+      name: "Peanut happy  dance Printed small bag",
+      price: 999,
+      strikedoffprice: 2199,
+      category : "Bag",
+    },
+    {
+      image_url:
+        "https://images.bewakoof.com/t320/star-wars-lightweight-adjustable-strap-men-slider-swl-330543-1641198981-5.jpg",
+      name: "Star wars adjustable strap sliders",
+      price: 769,
+      strikedoffprice: 1099,
+      Category : "sliders",
+    },
+    {
+      image_url:
+        "https://images.bewakoof.com/t320/noise-black-bluetooth-on-the-ear-headphone-460400-1640707168-1.jpg",
+      name: "Bluetooth headphones soft black",
+      price: 1399,
+      strikedoffprice: 1600,
+      category: "Headphones",
+    },
+    {
+      image_url:
+        "https://images.bewakoof.com/t320/noise-colorfit-qube-oxy-black-smartwatch-455513-1639050089-1.jpg",
+      name: "colorfit qube oxy black smartwatch",
+      price: 699,
+      strikedoffprice: 999,
+      category : "Smartwatch"
+    },
+    {
+      image_url:
+        "https://images.bewakoof.com/t320/scared-mickey-mug-320-ml-433543-1639742955-1.jpg",
+      name: "Scared mickey mug",
+      price: 220,
+      strikedoffprice: 599,
+      category : "Mugs",
+    },
+    {
+      image_url:
+        "https://images.bewakoof.com/t320/disney-mickey-red-bucket-hat-405271-1636642899-1.jpg",
+        name: "Disney mickey red bucket Cap",
+      price: 1620,
+      strikedoffprice: 3599,
+      category : "Caps",
+    },
+    {
+      image_url:
+        "https://images.bewakoof.com/t320/hp-full-length-socks-men-s-full-length-socks-272916-1613110548.jpg",
+      name: "HP full length Socks",
+      price: 299,
+      strikedoffprice: 399,
+      category : "Socks",
+    },
+    {
+      image_url:
+        "https://images.bewakoof.com/t320/last-benchers-printed-small-backpack-printed-small-backpack-237470-1571055150.jpg",
+      name: "last Benchers printed small backpack",
+      price: 1999,
+      strikedoffprice: 3199,
+      category : "Bag",
+    },
+    {
+      image_url:
+        "https://images.bewakoof.com/t320/friend-s-lightweight-adjustable-strap-men-slider-frl-333644-1641199175-5.jpg",
+      name: "Friends lightweight adjustable sliders",
+      price: 769,
+      strikedoffprice: 1099,
+      category : "sliders",
+    },
+    {
+      image_url:
+        "https://images.bewakoof.com/t320/noise-black-bluetooth-true-wireless-headphone-460413-1640707113-1.jpg",
+      name: "Buds VS103 Truly wireless headphones",
+      price: 1399,
+      strikedoffprice: 2999,
+      category : "Headphones"
+    },
+    {
+      image_url:
+        "https://images.bewakoof.com/t320/noise-colorfit-brio-grey-smartwatch-455512-1639049810-1.jpg",
+      name: "Colorfit Brio grey smartwatch",
+      price: 699,
+      strikedoffprice: 999,
+      category : "Smartwatch"
+    },
+    {
+      image_url:
+        "https://images.bewakoof.com/t320/teasing-mickey-mug-320-ml-433544-1639743015-1.jpg",
+      name: "teasing Mickey mug 320 ml",
+      price: 320,
+      strikedoffprice: 599,
+      category : "Mugs"
+    },
+    {
+      image_url:
+        "https://images.bewakoof.com/t320/force-trucker-cap-405262-1635942135-1.jpg",
+        name: "Force Trucker Cap",
+      price: 499,
+      strikedoffprice: 1199,
+      category : "Caps",
+    },
+    {
+      image_url:
+        "https://images.bewakoof.com/t320/stoner-gamer-no-show-combo-socks-men-s-no-show-combo-socks-272953-1620794057.jpg",
+      name: "Stoner Gamer Combo Socks",
+      price: 349,
+      strikedoffprice: 449,
+      Category : "Socks",
+    },
+    
+    {
+      image_url:
+        "https://images.bewakoof.com/t320/attitude-printed-small-backpack-458061-1640862611-1.jpg",
+      name: "Attitude Printed small backpack",
+      price: 769,
+      strikedoffprice: 1099,
+      category : "Bag",
+    },
+    {
+      image_url:
+        "https://images.bewakoof.com/t320/high-pattern-lightweight-adjustable-strap-mens-slider-273406-1637843568-1.jpg",
+      name: "High pattern adjustable strap sliders",
+      price: 299,
+      strikedoffprice: 540,
+      category : "sliders",
+    },
+    {
+      image_url:
+        "https://images.bewakoof.com/t320/noise-tune-active-red-in-the-ear-bluetooth-headphones-455517-1638966792-1.jpg",
+      name: "Tune active red in the ear headphones",
+      price: 699,
+      strikedoffprice: 999,
+      category : "Headphones",
+    },
+    {
+      image_url:
+        "https://images.bewakoof.com/t320/noise-colorfit-ultra-grey-smartwatch-455501-1639049889-1.jpg",
+      name: "Colorfit Ultra grey smartwatch",
+      price: 3599,
+      strikedoffprice: 5599,
+      category : "Smartwatch",
+    },
+    {
+      image_url:
+        "https://images.bewakoof.com/t320/satyam-kraft-black-ceramic-lazy-panda-printed-combo-mug-with-lid-spoon-and-key-chain-463465-1641386150-1.jpg",
+        name : "Black cermaric panda printed mug",
+      price: 500,
+      strikedoffprice: 999,
+      category : "Mugs",
+    },
+    {
+      image_url:
+        "https://images.bewakoof.com/t320/aop-neon-batman-snapback-cap-405266-1640354851-1.jpg",
+      name: "AOP neon batman snapback cap",
+      price: 599,
+      strikedoffprice: 1299,
+      category : "Caps",
+    },
+    {
+      image_url:
+        "https://images.bewakoof.com/t320/balenzia-x-harry-potter-gift-pack-for-men-lowcut-crew-socks-411574-1632833683-1.jpg",
+      name: "harry potter gift pack for Men",
+      price: 599,
+      strikedoffprice: 999,
+      category : "Socks",
+    },
+   
+    {
+      image_url:
+        "https://images.bewakoof.com/t320/caution-laptop-bag-411395-1641818332-1.jpg",
+      name: "Caution laaptop Bag",
+      price: 769,
+      strikedoffprice: 1099,
+      category : "Bag",
+    },
+    {
+      image_url:
+        "https://images.bewakoof.com/t320/jerry-hello-callout-lightweight-adjustable-strap-men-slider-tjl-352237-1635870256-3.jpg",
+      name: "jerry hello lightweight adjustable strap",
+      price: 299,
+      strikedoffprice: 399,
+      category : "sliders",
+    },
+    {
+      image_url:
+        "https://images.bewakoof.com/t320/boat-bassheads-100-in-the-ear-wired-headphone-424100-1633595428-1.jpg",
+      name: "Basshead 100 in ear wired Headphone",
+      price: 699,
+      strikedoffprice: 999,
+      category : "Headphones"
+    },
+    {
+      image_url:
+        "https://images.bewakoof.com/t320/noise-colorfit-ultra-blue-smartwatch-455503-1639050037-1.jpg",
+      name: "colorfit ultra fit blue smartwatch",
+      price: 1620,
+      strikedoffprice: 3599,
+      category : "Smartwatch"
+    },
+    {
+      image_url:
+        "https://images.bewakoof.com/t320/pine-lime-grey-printed-coffee-mugs-455467-1639561076-1.jpg",
+        name: "Grey CWTCH printed coffee mug",
+      price: 299,
+      strikedoffprice: 599,
+      category : "Mugs",
+    },
+    {
+      image_url:
+        "https://images.bewakoof.com/t320/marvel-baseball-cap-405268-1640354488-1.jpg",
+      name: "marvel baseball cap",
+      price: 499,
+      strikedoffprice: 999,
+      category : "Caps",
+    },
+    {
+      image_url:
+        "https://images.bewakoof.com/t320/balenzia-justice-league-men-s-cotton-sneaker-socks-superman-batman-aquaman-pack-of-3-411587-1632814402-1.jpg",
+      name: "Justice League mens cotton socks",
+      price: 599,
+      strikedoffprice: 999,
+      category : "Socks",
+    },
+
+   
+  ];
+
+  localStorage.setItem("Accessories", JSON.stringify(info2));
+
+  </script>
