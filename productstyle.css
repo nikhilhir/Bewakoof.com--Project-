@@ -119,19 +119,6 @@ input::selection {
   margin: 0.00100%;
 }
 
-#bottomNavbar {
-  display: flex;
-  justify-content: space-around;
-  width: 470px;
-  margin: auto;
-
-
-}
-
-#bottomNavbar>a {
-  font-weight: 600;
-}
-
 .imglogo {
   width: 150px;
   padding: 10px;
@@ -144,6 +131,10 @@ input::selection {
             margin: 30px 80px;
             padding: 10px;
 
+        }
+        
+        .currentpage > p{
+          margin-top : -30px;
         }
         .sub-body{
           width: 100%;
@@ -166,6 +157,7 @@ input::selection {
             line-height: 60px;
             color : black;
             font-size : 30px;
+            margin-top : -10px;
            
         }
         .title::after{
@@ -181,7 +173,7 @@ input::selection {
         /*filter design */   
        .filter-items{
             width : 30%;
-            margin-top :-10px;
+            margin-top :-15px;
                       
         }
         
@@ -301,14 +293,97 @@ input::selection {
         .off-info h5{
           margin-left: 5px;
         }
+         
+        #footer {
+          background-color: #181818;
+      }
 
+      #footer>div>img {
+          width: 10%;
+      }
+
+      .customer>h5 {
+          color: yellow;
+          margin: 0px 40px 0px 0px;
+      }
+
+      .cusDetails,
+      .logo {
+          display: flex;
+          margin: 0px 0px 0px 15%
+      }
+
+      .customer>ul>li {
+          color: white;
+          font-size: 12px;
+          list-style-type: none;
+          margin-left: -8%;
+      }
+
+      .customer>ul>li>img {
+          width: 5%;
+      }
+
+      #icons {
+          width: 35%;
+      }
+
+      .input>h5 {
+          color: yellow;
+          margin-top: 0px;
+      }
+
+      .input>ul {
+          display: flex;
+          margin-left: -12%;
+      }
+
+      .input>ul>li {
+          list-style-type: none;
+      }
+
+      #mailName {
+          width: 90%;
+          height: 35px;
+          background: #80808000;
+          color: white;
+      }
+
+      #subBtn {
+          width: 100%;
+          height: 35px;
+          background-color: #fdd835;
+          color: black;
+      }
+
+      #paymentgateway{
+          display: flex;
+      }
+
+      #paymentgateway>ul {
+          color: white;
+          list-style-type: none;
+      }
+
+      #paymentgateway>ul>li{
+          font-size: 13px;
+          margin-bottom: 1%;
+      }
+
+      #paymentgateway>ul>li>img {
+          width: 1%;
+          filter: invert(1);
+      }
 
         @media only screen and (min-width: 0px) and (max-width:499px){
           .currentpage p{
              font-size: 12px;
              margin-bottom: -15px;
-          } 
-          
+          }
+           
+          .head1{
+            display : none;
+          }
           .filter-items{
              display : none; 
            }
@@ -382,6 +457,10 @@ input::selection {
             font-size: 16px;
             margin-bottom : -10px;
          }  
+
+         .head1{
+          display : none;
+        }
           
           .filter-items{
               display : none;
@@ -449,4 +528,4 @@ input::selection {
               height : 40px;
               margin-top : -10px;
            }
-        }
+          }
