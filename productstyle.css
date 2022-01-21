@@ -6,6 +6,7 @@
 body {
   
   width: 99%;
+  font-family: 'Montserrat', sans-serif;
 
 }
 
@@ -14,6 +15,8 @@ body {
   top: 0;
   left: 0;
   background-color: white;
+  margin-top : -6px;
+  z-index: 1;
 
 }
 
@@ -130,7 +133,6 @@ input::selection {
             width : 93%;
             margin: 30px 80px;
             padding: 10px;
-
         }
         
         .currentpage > p{
@@ -160,20 +162,32 @@ input::selection {
             margin-top : -10px;
            
         }
+        .title > span{
+         color: #9494a5;
+         font-weight : lighter;
+        }
         .title::after{
             content: '';
             background: rgb(251,209,57);
-            width: 160px;
+            width: 170px;
             height: 3px;
             border-radius:5px;
             position: absolute;
             bottom:0;
-            transform: translatex(-100%) ;
+            transform: translatex(-140%) ;
         }
-        /*filter design */   
+        /*filter design */ 
+      
+       .head1{
+        color: rgb(51, 51, 51);
+        Font-size: 14px;
+        Font-weight: 600;
+        line-height: 14px;
+       } 
        .filter-items{
             width : 30%;
-            margin-top :-15px;
+            margin-top :-10px;
+            color: rgba(45, 45, 45, 0.5);
                       
         }
         
@@ -195,7 +209,7 @@ input::selection {
   
 /* product item design */
       .product-items{
-          width : 90%;
+          width : 100%;
           margin : auto;
           margin-left : 50px;
           margin-right: 120px;
@@ -232,7 +246,6 @@ input::selection {
 
       .btn-cart {
           background: transparent;
-          border: 1px solid black;
           padding: 0.8rem 0;
           width: 60px;
           height: 60px;
@@ -319,61 +332,109 @@ input::selection {
           list-style-type: none;
           margin-left: -8%;
       }
-
       .customer>ul>li>img {
-          width: 5%;
-      }
+        width: 5%;
+    }
 
-      #icons {
-          width: 35%;
-      }
+    #icons {
+        width: 35%;
+    }
 
-      .input>h5 {
-          color: yellow;
-          margin-top: 0px;
-      }
+    .inputt>h5 {
+        color: yellow;
+        margin-top: 0px;
+    }
 
-      .input>ul {
-          display: flex;
-          margin-left: -12%;
-      }
+    .inputt>ul {
+        display: flex;
+        margin-left: -12%;
+    }
 
-      .input>ul>li {
-          list-style-type: none;
-      }
+    .inputt>ul>li {
+        list-style-type: none;
+    }
 
-      #mailName {
-          width: 90%;
-          height: 35px;
-          background: #80808000;
-          color: white;
-      }
+    #mailName {
+        width: 90%;
+        height: 35px;
+        background: #80808000;
+        color: white;
+    }
+    #subBtn {
+      width: 100%;
+      height: 35px;
+      background-color: #fdd835;
+      color: black;
+  }
 
-      #subBtn {
-          width: 100%;
-          height: 35px;
-          background-color: #fdd835;
-          color: black;
-      }
+  #paymentgateway {
+      display: flex;
+      width: 75%;
+      margin: auto;
+  }
 
-      #paymentgateway{
-          display: flex;
-      }
+  #paymentgateway>div {
+      margin-left: 2%;
+  }
 
-      #paymentgateway>ul {
-          color: white;
-          list-style-type: none;
-      }
+  #paymentgateway>div>h5 {
+      color: yellow;
+  }
 
-      #paymentgateway>ul>li{
-          font-size: 13px;
-          margin-bottom: 1%;
-      }
+  #paymentgateway>div>ul {
+      color: white;
+      list-style-type: none;
+  }
 
-      #paymentgateway>ul>li>img {
-          width: 1%;
-          filter: invert(1);
-      }
+  #paymentgateway>div>ul>li {
+      font-size: 13px;
+      margin-bottom: 5%;
+      margin-top: 5%;
+  }
+  #paymentgateway>div>ul>li>img {
+    width: 5%;
+    filter: invert(1);
+}
+
+.mrgn {
+    width: 80%;
+}
+
+#allDetails {
+    display: flex;
+    background-color: #181818;
+    color: white;
+    margin-left: 10%;
+}
+
+#allDetails>div>ul>li {
+    list-style-type: none;
+    font-size: 12px;
+    margin-left: -20%;
+}
+
+.offerArea {
+    margin-left: 15%;
+}
+
+.offerArea>h3 {
+    margin-bottom: 35%;
+    color: #51cccc;
+}
+
+/* slider css-----*/
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#3838389c, #1312127a);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(#0051ff, #002fff);
+}
 
         @media only screen and (min-width: 0px) and (max-width:499px){
           .currentpage p{
@@ -451,7 +512,7 @@ input::selection {
          }
          
         }
-
+       
         @media only screen and (min-width: 500px) and (max-width: 800px){
           .currentpage p{
             font-size: 16px;
@@ -528,4 +589,5 @@ input::selection {
               height : 40px;
               margin-top : -10px;
            }
+          
           }
