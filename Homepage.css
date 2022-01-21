@@ -1,4 +1,4 @@
-/* Header CSS Start */
+/* ---------------------------------------Header CSS Start------------------------------------------------ */
 
 * {
     box-sizing: border-box;
@@ -85,7 +85,7 @@ input::selection {
     width: 80%;
     margin: auto;
     box-sizing: border-box;
-    margin-top: 5px;
+    margin-top: 0.30%;
 
 }
 
@@ -123,7 +123,7 @@ input::selection {
 #bottomNavbar {
     display: flex;
     justify-content: space-around;
-    width: 470px;
+    width: 40%;
     margin: auto;
 
 
@@ -139,7 +139,7 @@ input::selection {
 
 }
 
-/* Header CSS END */
+/*--------------------------------------------------- Header CSS END ---------------------------------------------------------*/
 
 #offerSection>a>img {
     width: 32%;
@@ -275,7 +275,7 @@ input::selection {
     margin: 10px;
 }
 
-/* Footer CSS Start */
+/*--------------------------------------------------- Footer CSS Start -------------------------------------------------*/
 
 #footer {
     background-color: #181818;
@@ -373,14 +373,14 @@ input::selection {
     display: flex;
     background-color: #181818;
     color: white;
-    margin-left: 20%;
+    margin-left: 10%;
 }
 
 #allDetails>div>ul>li {
     list-style-type: none;
     font-size: 12px;
     margin-left: -20%;
-} 
+}
 
 .offerArea {
     margin-left: 15%;
@@ -390,3 +390,34 @@ input::selection {
     margin-bottom: 35%;
     color: #51cccc;
 }
+
+.footerAboutUs>div>p,
+.footerAboutUs>div>h2,
+.footerAboutUs>div>h1 {
+    color: white;
+}
+
+.footerAboutUs>div>p>a {
+    color: #5ca3a6;
+}
+
+.footerAboutUs>div {
+    width: 80%;
+    margin: auto;
+}
+
+/*------------------------------------- Scrool Bar Design------------------------------------------------- */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(transparent, #30ff00);
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(transparent, #00c6ff);
+}
+
+/*--------------------------------------- Scrool Bar Design End-------------------------------------------------- */
