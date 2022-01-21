@@ -69,7 +69,7 @@
 
         }
 
-        input::selection {
+        inputt::selection {
             background-color: white;
             color: black;
 
@@ -323,17 +323,17 @@
             width: 35%;
         }
 
-        .input>h5 {
+        .inputt>h5 {
             color: yellow;
             margin-top: 0px;
         }
 
-        .input>ul {
+        .inputt>ul {
             display: flex;
             margin-left: -12%;
         }
 
-        .input>ul>li {
+        .inputt>ul>li {
             list-style-type: none;
         }
 
