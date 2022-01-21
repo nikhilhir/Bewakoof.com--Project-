@@ -30,7 +30,7 @@
             display: flex;
             justify-content: space-around;
             background-color: #eee;
-            padding: 5px;
+            /* padding: 5px; */
 
         }
 
@@ -58,7 +58,7 @@
             border-radius: 8px;
             padding: 10px;
             font-weight: 600;
-            font-size: 0.51em;
+            font-size: 0.65em;
 
         }
 
