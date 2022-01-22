@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <style>
+        .main{
+            width: 50%;
+            box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+            margin-top: 20px;;
+            display: flex;
+            margin-left: 50px;
+            justify-content: space-between;
+        }
+        .one{
+            height: 500px;
+            width: 46%;
+            background-color: rgba(0,0,0,.04);
+            
+        }
+        .second{
+            height: 400px;
+            width: 50%;
+            margin-top: 30px;
+            text-align: left;
+            
+        }
+        .third{
+            height: 300px;
+            width: 50%;
+            margin-bottom: 10px;
+        }
+        button{
+            display:block;
+            border: 0;
+            box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+            text-align: left;
+            background: transparent;
+            font-size: 20px;
+            margin-bottom: 20px;
+            cursor: pointer;
+            background-color:rgba(211, 211, 211, 0.966);
+            width:100%;
+            height: 50px;
+        }
+        #three , #four{
+            width: 43%;
+            display: inline;
+
+        }
+        input{
+            display: block;
+            height: 40px;
+            width: 90%;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        p{
+            margin-bottom: 10px;
+        }
+        #check,p{
+            width: 20px;
+            height: 12px;
+            display: inline;
+        }
+        .btn{
+            background-color: rgb(129, 170, 245);
+            width: 90%;
+            height: 50px;
+            text-align: center;
+            font-size: 20px;
+            color: white;
+            border-radius: 5px;
+            
+        }
+        .btt{
+            text-align: center;
+            width: 95%;
+            height: 50px;
+            font-size: 20px;
+            color: white;
+            border-radius: 5px;
+            
+        }
+        .h2{
+           display: flex;
+           justify-content: space-between;
+           width: 50%; 
+           margin-left: 50px;
+        }
+        .imglogo{
+            margin-left: 50px;
+            font-size: 40px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="ml">
+        <div>
+            <a href="Homepage.html"><img class="imglogo"
+                    src="https://images.bewakoof.com/web/bewakoof-primary-logo-white-bg-2x-1635745564.png"
+                    alt=""></a>
+        </div>
+
+        <hr>
+       
+    <div class="h2">
+        <h2>Payment</h2>
+    <h2 class="total"> Pay₹449</h2>
+    </div>
+    
+    <div class="main">
+        <div class="one">
+            <button onclick="cashon()"> Debit/credit card</button>
+            <button>Paytm wallet</button>
+            <button>UPi</button>
+            <button>Buy now pay later</button>
+            <button>Net Banking</button>
+            <button onclick="debitcard()">Cash on delivery</button>
+        </div>
+        <div class="second">
+            <input type="text" id="one" placeholder="card holder name">
+            <input type="text" id="two" placeholder="card number">
+            <input type="text" id="three" placeholder="expiry date">
+            <input type="text" id="four" placeholder="enter cvv">
+            <input type="checkbox" name="" id="check">
+            <p>Securely save this card for faster payments</p>
+            <button class="btt">Pay Now</button>
+        </div>
+        <div class="third">
+            <h3>Cash on delivery</h3>
+            <p>Use online payment for safety and to avail attractive cashback offers.</p>
+            <h4>Final Amount &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="total3"></span> </h4>
+            <h4>Cash Collection Charges &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;₹0</h4>
+            <h3>Total Payable Amount&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="total2"></span></h3>
+            <button class="btn">Pay with cash</button>
+
+
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    var pay=JSON.parse(localStorage.getItem("finalpayment")) || [];
+    
+
+    document.querySelector(".third").style.display="none";
+    function debitcard(){
+        document.querySelector(".second").style.display="none";
+        document.querySelector(".third").style.display="";
+
+    }
+    function cashon(){
+        document.querySelector(".second").style.display="";
+        document.querySelector(".third").style.display="none";
+        
+    }
+    if(pay.length > 1){
+        document.querySelector(".total").textContent=pay[1];
+        document.querySelector(".total2").textContent=pay[1];
+        document.querySelector(".total3").textContent=pay[1];
+        console.log(pay[1]);
+    }else{
+        document.querySelector(".total").textContent=pay[0];
+        document.querySelector(".total2").textContent=pay[0];
+        document.querySelector(".total3").textContent=pay[0];
+        console.log(pay[0]);
+    }
+</script>

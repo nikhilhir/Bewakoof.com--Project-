@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify with OTP</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        /* ---------------------------------------Header CSS Start------------------------------------------------ */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            width: 98.18%;
+
+        }
+
+        #Header {
+            position: sticky;
+            top: 0;
+            left: 0;
+            background-color: white;
+
+        }
+
+        a {
+            text-decoration: none;
+            font-size: 15px;
+            color: black;
+
+
+        }
+
+        #topNavbar {
+            display: flex;
+            justify-content: space-around;
+            background-color: #eee;
+            padding: 5px;
+
+        }
+
+        .left>a {
+            margin-left: 10px;
+            text-decoration: none;
+            font-size: 10px;
+            font-weight: 600;
+
+        }
+
+        .right>a {
+            margin-left: 10px;
+            text-decoration: none;
+            font-size: 10px;
+            font-weight: 600;
+
+        }
+
+        .search {
+            width: 25%;
+            background: #eaeaea;
+            color: rgba(0, 0, 0, .5);
+            border: 1px solid transparent;
+            border-radius: 8px;
+            padding: 10px;
+            font-weight: 600;
+            font-size: 0.51em;
+
+        }
+
+        #searchLogo>img {
+            width: 40px;
+            height: 40px;
+            padding: 10px;
+
+        }
+
+        input::selection {
+            background-color: white;
+            color: black;
+
+        }
+
+        .moblogo {
+            width: 20px;
+
+        }
+
+        #midNavbar {
+            display: flex;
+            justify-content: space-around;
+            width: 80%;
+            margin: auto;
+            box-sizing: border-box;
+            margin-top: 0.30%;
+
+        }
+
+        .midMid {
+            font-size: 17px;
+            padding: 10px;
+            margin-right: 20%;
+
+        }
+
+        .midMid>a {
+            margin-left: 25px;
+            margin: 0px 10px 0px 10px;
+            font-size: 12px;
+            font-weight: 600;
+
+        }
+
+        #bottomNavbar>a:hover,
+        .midMid>a:hover {
+            border-bottom: 4px solid #fdd835;
+        }
+
+        .midRight {
+            border-left: 1px solid black;
+            padding: 10px;
+
+        }
+
+        .midRight>a>img {
+            width: 24px;
+            margin: 0.00100%;
+        }
+
+        #bottomNavbar {
+            display: flex;
+            justify-content: space-around;
+            width: 40%;
+            margin: auto;
+        }
+
+        #bottomNavbar>a {
+            font-weight: 600;
+        }
+
+        #bottomNavbar>a>p {
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        #bottomNavbar>a>p:hover{
+            font-weight: bolder;
+        }
+
+        .imglogo {
+            width: 150px;
+            padding: 10px;
+
+        }
+
+        /*--------------------------------------------------- Header CSS END ---------------------------------------------------------*/
+        
+        html,body {
+            height: 100%;
+        }
+        body {
+            background-image: linear-gradient(0deg,#fff4c4,#fff);
+            text-align: center;
+            font-family: 'Montserrat',sans-serif;
+            padding: 0 0 0 0.5em;
+        }
+        #container > h4 {
+            margin-top: 0;
+            font-weight: 800;
+        }
+        #container > p {
+            font-size: 0.8rem;
+            color: darkgray;
+            font-weight: 600;
+        }
+        #container > hr {
+            margin-top: 0;
+            margin-bottom: 2em;
+            width: 30%;
+            border-top: 0;
+            border-left: 0;
+            border-right: 0;
+            border-bottom: 0.5px solid darkgray;
+        }
+        #container {
+            margin: auto;
+            padding: 1em 1em 1em 1em;
+            background-color: snow;
+            width: 85%;
+        }
+        #container > #mobile {
+            margin-bottom: 0.2rem;
+            font-weight: 800;
+        }
+        #container > #otp {
+            background-color: transparent;
+            border: 0.5px solid darkgray;
+            border-top: 0;
+            border-left: 0;
+            border-right: 0;
+            height: 9vh;
+            /* width: 40%; */
+            font-size: 1.5em;
+            text-align: center;
+        }
+        #container > .text2 {
+            color: rgb(68, 181, 185);
+            font-weight: 400;
+        }
+        #container > .text3 {
+            margin-top: 2.3em;
+            font-size: 0.7em;
+        }
+        .arrow-con {
+            border: solid rgb(68, 181, 185);
+            border-width: 0 2px 2px 0;
+            display: inline-block;
+            padding: 5px;
+            /* border-width: thin; */
+        }
+
+        .right-con {
+            transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+        }
+        #container > #submit {
+            margin-top: 0.8em;
+            /* background-color: rgb(143, 143, 143); */
+            background-color: #42a2a2;
+            color: snow;
+            border: none;
+            font-family: 'Montserrat',sans-serif;
+            width: 40%;
+            padding: 0.9em;
+            border-radius: 0.2em;
+        }
+        #container > .inv {
+            color: transparent;
+            margin-top: 0.4em;
+            margin-bottom: 1.5em;
+            font-size: 0.7em;
+        }
+        #container > #inv {
+            color: #d24141;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- <************************************************Header **************************************> -->
+
+    <div id="Header">
+
+        <!-- <************************************************Top Navbar **************************************> -->
+
+        <div id="topNavbar">
+            <!-------------------------Left Part ------------------------------>
+            <div class="left">
+                <a href="">Offers</a>
+                <a href="">Fanbook</a>
+                <a href="">Download App</a>
+                <a href="">TriBe Membership</a>
+            </div>
+            <!------------------------ Right Part ------------------>
+            <div class="right">
+                <a href="">Contact Us</a>
+                <a href="">Track Order</a>
+            </div>
+        </div>
+        <!-- <************************************************Mid Navbar **************************************> -->
+        <div id="midNavbar">
+            <!------------------------------------------ Left Part -------------------------------------------------->
+            <div class="midLeft">
+                <div>
+                    <a href="Homepage.html"><img class="imglogo"
+                            src="https://images.bewakoof.com/web/bewakoof-primary-logo-white-bg-2x-1635745564.png"
+                            alt=""></a>
+                </div>
+            </div>
+            <!------------------------------------------ Mid Part -------------------------------------------------->
+            <div class="midMid">
+                <a href="Mens.html">MEN</a>
+                <a href="Womens.html">WOMEN</a>
+                <a href="Accessories.html">ACCESSORIES</a>
+            </div>
+
+            <a id="searchLogo" href=""><img src="https://cdn-icons-png.flaticon.com/128/54/54481.png" alt=""></a>
+            <input type="text" class="search" placeholder="Search by product, categories or collection">
+
+            <!------------------------------------------ Right Part -------------------------------------------------->
+            <div class="midRight">
+                <a href="login.html"><img src="https://cdn2.iconfinder.com/data/icons/e-commerce-line-4-1/1024/user4-128.png"
+                        alt=""></a>
+                <a href="wishlist.html"><img src="https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678087-heart-128.png"
+                        alt=""></a>
+                <a href="AddToCart.html"><img
+                        src="https://cdn1.iconfinder.com/data/icons/shopping-346/24/buy-bag-cart-shop-shopping-128.png"
+                        alt=""></a>
+            </div>
+        </div>
+        <hr>
+        <!-- <************************************************Bottom Navbar **************************************> -->
+        <!-- <div id="bottomNavbar">
+            <a href="">
+                <p>MEN</p>
+            </a>
+            <a href="">
+                <p>WOMEN</p>
+            </a>
+            <a href="">
+                <p>ACCESSORIES</p>
+            </a>
+        </div> -->
+    </div>
+
+    <!-- <h1 style="margin: 0;">main page content</h1> -->
+
+
+
+    <div id="container">
+        <h4>Verify with OTP</h4>
+        <p> Sent to </p>
+        <p id="mobile"></p>
+        <hr>
+        <p> Enter OTP </p>
+        <input type="number" id="otp" maxlength="4">
+        <p class="inv">Please enter a valid OTP.</p>
+        <p class="text2"> RESEND OTP </p>
+        <p class="text2 text3" id="loginP"> Login with password <span> <i class="arrow-con right-con"></i> </span> </p>
+        <input type="submit" value="LOGIN" id="submit">
+    </div>
+</body>
+</html>
+
+<script>
+    let phone = JSON.parse(localStorage.getItem('userContactNo'));
+    document.getElementById('mobile').textContent = phone;
+
+    function loginWithPass() {
+        window.location.href = "loginPass.html";
+    }
+    document.getElementById('loginP').addEventListener('click',loginWithPass);
+
+    function loginWithOtp() {
+        console.log(typeof(document.getElementById('otp').value))
+        if (document.getElementById('otp').value == "1234") {
+            window.location.href = "Homepage.html";
+        } else {
+            document.getElementsByClassName('inv')[0].setAttribute('id','inv');
+        }
+    }
+    document.getElementById('submit').addEventListener('click',loginWithOtp)
+</script>
