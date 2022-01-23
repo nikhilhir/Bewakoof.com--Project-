@@ -1,0 +1,453 @@
+        /* -------------------------------------------------------Header CSS Start------------------------------------------------ */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            width: 98.18%;
+
+        }
+
+        #Header {
+            position: sticky;
+            top: 0;
+            left: 0;
+            background-color: white;
+            margin-top: -6px;
+
+        }
+
+        a {
+            text-decoration: none;
+            /* font-size: 15px; */
+            color: black;
+
+
+        }
+
+        #topNavbar {
+            display: flex;
+            justify-content: space-around;
+            background-color: #eee;
+            /* padding: 5px; */
+
+        }
+
+        .left>a {
+            margin-left: 10px;
+            text-decoration: none;
+            font-size: 10px;
+            font-weight: 600;
+
+        }
+
+        .right>a {
+            margin-left: 10px;
+            text-decoration: none;
+            font-size: 10px;
+            font-weight: 600;
+
+        }
+
+        .search {
+            width: 25%;
+            background: #eaeaea;
+            color: rgba(0, 0, 0, .5);
+            border: 1px solid transparent;
+            border-radius: 8px;
+            padding: 10px;
+            font-weight: 600;
+            font-size: 0.65em;
+
+        }
+
+        #searchLogo>img {
+            width: 40px;
+            height: 40px;
+            padding: 10px;
+
+        }
+
+        .moblogo {
+            width: 20px;
+
+        }
+
+        #midNavbar {
+            display: flex;
+            justify-content: space-around;
+            width: 80%;
+            margin: auto;
+            box-sizing: border-box;
+            margin-top: 0.30%;
+
+        }
+
+        .midMid {
+            font-size: 17px;
+            padding: 10px;
+            margin-right: 20%;
+
+        }
+
+        .midMid>a {
+            margin-left: 25px;
+            margin: 0px 10px 0px 10px;
+            font-size: 12px;
+            font-weight: 600;
+
+        }
+
+        #bottomNavbar>a:hover,
+        .midMid>a:hover {
+            border-bottom: 4px solid #fdd835;
+        }
+
+        .midRight {
+            border-left: 1px solid black;
+            padding: 10px;
+
+        }
+
+        .midRight>a>img {
+            width: 24px;
+            margin: 0.00100%;
+        }
+
+        /* -----------------------------------------------------Header CSS END------------------------------------------------ */
+
+        /*----------------------------------------------------- Bottom Navbar Start----------------------------------------------- */
+
+        #bottomNavbar {
+            display: flex;
+            justify-content: space-around;
+            width: 40%;
+            margin: auto;
+        }
+
+        #bottomNavbar>a {
+            font-weight: 600;
+        }
+
+        #bottomNavbar>a>p {
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        #bottomNavbar>a>p:hover{
+            font-weight: bolder;
+        }
+
+        .imglogo {
+            width: 150px;
+            padding: 10px;
+        }
+
+        /* ----------------------------------------------------Bottom Navbar End--------------------------------------------------- */
+
+        /*--------------------------------------------------- Header CSS END ---------------------------------------------------------*/
+
+        #offerSection>a>img {
+            width: 32%;
+            margin: 8px;
+        }
+
+        .ad1>a>img {
+            width: 100%;
+            margin: 10px;
+        }
+
+        .ad2 {
+            display: flex;
+            width: 80%;
+            margin: auto;
+
+        }
+
+        .ad2>a {
+            margin: 10px;
+        }
+
+        .ad2>a>img {
+            width: 100%;
+            border-radius: 15px;
+        }
+
+        .ad2>a>img:hover{
+            box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+        }
+
+        .pSize {
+            font-size: 13px;
+            font-weight: 900;
+            text-align: center;
+        }
+
+        /* .pSize:hover{
+            box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+        } */
+
+        #bestseller>h3,
+        #exulsive>h3,
+        .popCat>h3,
+        #discount>h3,
+        #endAd>div>h3 {
+            text-align: center;
+            font-weight: 900;
+            font-size: 22px;
+            margin-bottom: 0px;
+        }
+
+        .exad1 {
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .exad1>a {
+            margin: 10px;
+        }
+
+        .exad1>div>a>img {
+            width: 98%;
+            margin: 10px;
+        }
+
+        .popAd {
+            display: flex;
+            width: 80%;
+            margin: auto;
+        }
+
+        .popAd>div>a>img {
+            width: 80%;
+            margin: 5%;
+            border-radius: 10px;
+            transition-timing-function: ease-in-out;
+        }
+
+        .popAd>div>a>img:hover{
+            width: 85%;
+            transition: width 0.5s;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        }
+
+        .dscOffers {
+            display: flex;
+        }
+
+        .dsAd {
+            display: flex;
+            width: 100%;
+        }
+
+        .dsAd>div>a>img {
+            width: 95%;
+            margin: 5%;
+            border-radius: 5px;
+        }
+
+        .menSection {
+            display: flex;
+            width: 80%;
+            margin: auto;
+        }
+
+        .menSection>div {
+            margin: 1%;
+
+        }
+
+        .menSection>div>img {
+            width: 95%;
+            margin: 10px;
+            transition-timing-function: ease-in-out;
+        }
+
+        .menSection>div>img:hover {
+            width: 100%;
+            transition: width 0.5s;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        }
+
+        .menSection>div>span:nth-child(2) {
+            text-decoration: line-through;
+            margin: 0px 10px 0px 20px;
+            font-size: 15px;
+
+        }
+
+        .menSection>div>span>b {
+            margin: 0px 0px 0px 5px;
+            font-size: large;
+
+        }
+
+        #view>a>h3 {
+            font-size: 14px;
+            text-align: center;
+            text-decoration: underline;
+            margin: 0px;
+            color: #5ca3a6;
+        }
+
+        #view>a>h3:hover {
+            text-decoration: none;
+        }
+
+        .endAd>img {
+            width: 100%;
+            margin: 10px;
+        }
+
+        /*--------------------------------------------------- Footer CSS Start -------------------------------------------------*/
+
+        #footer {
+            background-color: #181818;
+        }
+
+        #footer>div>img {
+            width: 10%;
+        }
+
+        .customer>h5 {
+            color: yellow;
+            margin: 0px 40px 0px 0px;
+        }
+
+        .cusDetails,
+        .logo {
+            display: flex;
+            margin: 0px 0px 0px 15%
+        }
+
+        .customer>ul>li {
+            color: white;
+            font-size: 12px;
+            list-style-type: none;
+            margin-left: -8%;
+        }
+
+        .customer>ul>li>img {
+            width: 5%;
+        }
+
+        #icons {
+            width: 35%;
+        }
+
+        .inputt>h5 {
+            color: yellow;
+            margin-top: 0px;
+        }
+
+        .inputt>ul {
+            display: flex;
+            margin-left: -12%;
+        }
+
+        .inputt>ul>li {
+            list-style-type: none;
+        }
+
+        #mailName {
+            width: 90%;
+            height: 35px;
+            background: #80808000;
+            color: white;
+        }
+
+        #subBtn {
+            width: 100%;
+            height: 35px;
+            background-color: #fdd835;
+            color: black;
+        }
+
+        #paymentgateway {
+            display: flex;
+            width: 75%;
+            margin: auto;
+        }
+
+        #paymentgateway>div {
+            margin-left: 2%;
+        }
+
+        #paymentgateway>div>h5 {
+            color: yellow;
+        }
+
+        #paymentgateway>div>ul {
+            color: white;
+            list-style-type: none;
+        }
+
+        #paymentgateway>div>ul>li {
+            font-size: 13px;
+            margin-bottom: 5%;
+            margin-top: 5%;
+        }
+
+        #paymentgateway>div>ul>li>img {
+            width: 5%;
+            filter: invert(1);
+        }
+
+        .mrgn {
+            width: 80%;
+        }
+
+        #allDetails {
+            display: flex;
+            background-color: #181818;
+            color: white;
+            margin-left: 10%;
+        }
+
+        #allDetails>div>ul>li {
+            list-style-type: none;
+            font-size: 12px;
+            margin-left: -20%;
+        }
+
+        .offerArea {
+            margin-left: 15%;
+        }
+
+        .offerArea>h3 {
+            margin-bottom: 35%;
+            color: #51cccc;
+        }
+
+        .footerAboutUs>div>p,
+        .footerAboutUs>div>h2,
+        .footerAboutUs>div>h1 {
+            color: white;
+        }
+
+        .footerAboutUs>div>p>a {
+            color: #5ca3a6;
+        }
+
+        .footerAboutUs>div {
+            width: 80%;
+            margin: auto;
+        }
+
+        /*------------------------------------- Scrool Bar Design------------------------------------------------- */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(#3838389c, #1312127a);
+            border-radius: 6px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(#5ca3a6, #0051ff);
+        }
+
+        /*--------------------------------------- Scrool Bar Design End-------------------------------------------------- */
