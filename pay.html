@@ -122,13 +122,13 @@
             <button onclick="debitcard()">Cash on delivery</button>
         </div>
         <div class="second">
-            <input type="text" id="one" placeholder="card holder name">
-            <input type="text" id="two" placeholder="card number">
-            <input type="text" id="three" placeholder="expiry date">
-            <input type="text" id="four" placeholder="enter cvv">
-            <input type="checkbox" name="" id="check">
+            <input type="text" id="one" placeholder="card holder name" required>
+            <input type="text" id="two" placeholder="card number" required>
+            <input type="text" id="three" placeholder="expiry date" required>
+            <input type="text" id="four" placeholder="enter cvv" required>
+            <input type="checkbox" name="" id="check" required>
             <p>Securely save this card for faster payments</p>
-            <button class="btt">Pay Now</button>
+            <button class="btn">Pay Now</button>
         </div>
         <div class="third">
             <h3>Cash on delivery</h3>
@@ -146,7 +146,10 @@
 <script>
     var pay=JSON.parse(localStorage.getItem("finalpayment")) || [];
     
-
+    document.querySelector(".btn").addEventListener("click",function (){
+        alert("Your Order Is succefull");
+    window.location.href="Homepage.html";
+  })
     document.querySelector(".third").style.display="none";
     function debitcard(){
         document.querySelector(".second").style.display="none";
