@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+   *{
+    font-family: sans-serif;
+ }
+  .navbar {
+  width: 100%;
+  border-bottom: 1px solid rgb(197, 197, 197);
+  display: flex;
+  justify-content: space-between;
+}
+#logo {
+  height: 26px;
+  padding: 9px;
+  margin-left: 100px;
+}
+#userid {
+  height: 26px;
+  padding: 9px;
+  margin-right: 100px;
+}
+        /* ---------------------------------------------------when cart is empty--------------------------------------------------  */
+.emptyarrdiv {
+  width: 38%;
+  margin: 30px auto;
+  text-align: center;
+}
+#emptycart {
+  width: 150px;
+}
+#emptybagdiv {
+  border-bottom: 1px solid rgb(197, 197, 197);
+}
+#para {
+  font-size: 20px;
+  margin: 0;
+  color: rgb(105, 105, 105);
+}
+#para2 {
+  font-size: 16px;
+  margin-top: 20px;
+  color: rgb(105, 105, 105);
+}
+button {
+  padding: 10px;
+  font-size: 20px;
+  border: 2px solid rgb(8, 226, 215);
+  border-radius: 5px;
+  background: transparent;
+  display: inline-block;
+  margin: 15px 0px 25px 0px;
+  color: rgb(8, 226, 215);
+}
+#emptyarrtable {
+  margin: -25px auto;
+  margin-bottom: 20px;
+  text-align: left;
+}
+a {
+  color: rgb(8, 226, 215);
+}
+td {
+  padding: 8px 35px;
+  color: rgb(99, 99, 99);
+}
+.caintainerdiv{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  text-align: center;
+  width: 85%;
+  margin: auto;
+}
+#item{
+  padding: 10px;
+  position: relative;
+}
+#item>img{
+  width: 300px;
+}
+#item>button{
+  width: 100%;
+  color: black;
+  cursor: pointer;
+}
+#rem{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  font-size: 25px;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+  text-align: center;
+  position: absolute;
+  top: 5%;
+  right: 10%;
+  background-color: rgb(246,246,246);
+}
+#wish{
+  margin-left: 8%;
+}
+@media only screen and (min-width:0px) and (max-width:380px){
+  .caintainerdiv{
+  grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+</style>
+</head>
+<body>
+     <!-- -----------------------------------------------Navbar-------------------------------------------------- -->
+     <div class="navbar">
+        <div onclick="window.location.href='Homepage.html'">
+          <img
+            src="https://images.bewakoof.com/web/bewakoof-primary-logo-white-bg-2x-1635745564.png" alt="logo" id="logo"/>
+        </div>
+        <div id="userid">
+          <span style="display: block;" id="usernameh"></span>
+          <span id="useremailh"></span>
+        </div>
+      </div>
+      <!-- -----------------------------------------------Navbar(↑)-------------------------------------------------- -->
+
+<!-- -----------------------------------------------empty wishlist-------------------------------------------------- -->
+    <div class="emptyarrdiv">
+        <div id="emptybagdiv">
+          <img src="https://images.bewakoof.com/web/group-3x-1509961969.png" alt="emptywishlist" id="emptycart"/>
+          <p id="para">Your Wishlist is Empty !</p>
+          <button>Continue Shoping</button>
+        </div>
+        <div>
+            <p id="para2">You could try one of these categories:</p>
+            <table id="emptyarrtable">
+                <tr>
+                    <td id="t">Men</td>
+                    <td>   
+                       <p><a href="#">Topwere</a></p> 
+                       <p> <a href="#">Footwear</a></p>
+                    </td>
+                    <td>
+                        <p><a href="#">Bottomwere</a></p>
+                        <p><a href="#">Bestsellers</a></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Women</td>
+                    <td>
+                        <p><a href="#">topwere</a></p>
+                        <p><a href="#">Bestsellers</a></p>
+                    </td>
+                    <td><a href="#">Bottomwere</a></td>
+                </tr>
+                <tr>
+                    <td>Mobile</td>
+                    <td><a href="#">AllMobileCover</a></td>
+                    <td></td>
+                </tr>
+            </table>
+            <img src="https://images.bewakoof.com/web/secure-payments-image.png" alt="">
+        </div>
+      </div>
+<!-- -----------------------------------------------empty wishlist(↑)-------------------------------------------------- -->
+      <h2 id="wish">WISHLIST</h2>
+      <div class="caintainerdiv">
+      </div>
+</body>
+</html>
+<script>
+  var arr = JSON.parse(localStorage.getItem("Wishlist")) || [];
+  var bagarr = JSON.parse(localStorage.getItem("addtobag")) || [];
+  createlement(arr);
+  initial(arr);
+  function initial(arr){ 
+    if(arr.length >= 1){
+    document.querySelector(".emptyarrdiv").style.display="none";
+    }else{
+      console.log(arr.length);
+      document.querySelector(".caintainerdiv").style.display="none";
+      document.querySelector("#wish").style.display="none";
+      document.querySelector(".emptyarrdiv").style.display="";
+    };
+  }
+  function createlement(arr){
+    document.querySelector(".caintainerdiv").innerHTML="";
+    arr.map(function creatboby(obj,index) {
+    var div = document.createElement("div");
+    div.setAttribute("id","item");
+
+    var img=document.createElement("img");
+    img.setAttribute("src", obj.image_url);
+
+    var name=document.createElement("p");
+    name.textContent=obj.name;
+    
+    var pric=document.createElement("span");
+    pric.textContent=obj.price;
+
+    var strik=document.createElement("span");
+    strik.textContent=obj.strikedoffprice;
+
+    var btn=document.createElement("button");
+    btn.textContent="Move To Bag";
+     btn.addEventListener("click",function(){
+        addtobag(obj);
+        });
+
+      var remov =document.createElement("div");
+     remov.setAttribute("id","rem");
+     remov.addEventListener("click",function(){
+           deleteitem(index);
+      });
+
+    var spa=document.createElement("span");
+    spa.innerHTML="&#xD7";
+    remov.append(spa);
+
+    div.append(img,name,pric,strik,btn,remov);
+    
+    document.querySelector(".caintainerdiv").append(div);
+   });
+  };
+  function deleteitem(index){
+        arr.splice(index,1);
+     localStorage.setItem("Wishlist",JSON.stringify(arr));
+     createlement(arr);
+     initial(arr);
+  }
+  function addtobag(obj){
+    bagarr.push(obj);
+    alert("Your item added to cart");
+    localStorage.setItem("addtobag",JSON.stringify(bagarr));
+  }
+</script>
