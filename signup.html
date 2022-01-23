@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com"> 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;600;800&display=swap" rel="stylesheet">
     <style>
         /* ---------------------------------------Header CSS Start------------------------------------------------ */
@@ -26,6 +27,7 @@
             top: 0;
             left: 0;
             background-color: white;
+            margin-top: -6px;
 
         }
 
@@ -148,7 +150,7 @@
             font-weight: 500;
         }
 
-        #bottomNavbar>a>p:hover{
+        #bottomNavbar>a>p:hover {
             font-weight: bolder;
         }
 
@@ -162,14 +164,16 @@
 
 
         body {
-            font-family: 'Montserrat',sans-serif;
-            background-image: linear-gradient(0deg,#fff4c4,#fff);
+            font-family: 'Montserrat', sans-serif;
+            background-image: linear-gradient(0deg, #fff4c4, #fff);
         }
+
         #container {
             display: flex;
             width: 75%;
             margin: auto;
         }
+
         #innerdiv1 {
             display: flex;
             flex-direction: column;
@@ -177,11 +181,13 @@
             box-sizing: border-box;
             width: 50%;
         }
-        #innerdiv1 > img {
+
+        #innerdiv1>img {
             height: 70vh;
             object-fit: contain;
             margin-bottom: 2em;
         }
+
         #innerdiv2 {
             margin: 0 auto;
             width: 50%;
@@ -193,43 +199,66 @@
             justify-content: center;
             align-content: center;
         }
-        #innerdiv2 > h1 {
+
+        #innerdiv2>h1 {
             font-size: 1.1em;
             font-weight: 600;
             margin: 0;
             color: rgb(32, 32, 32);
         }
-        #innerdiv2 > h6 {
+
+        #innerdiv2>h6 {
             font-size: 0.75em;
             font-weight: 700;
             margin: 1em auto 2em;
             color: rgb(50, 50, 50);
         }
+
         .input-field {
             border: none;
             border-bottom: 0.5px solid darkgray;
             margin-bottom: 2em;
         }
+
         form {
             margin-bottom: 0.5em;
         }
+
         label {
             font-size: 0.54em;
             font-weight: 600;
             color: rgb(78, 78, 78);
         }
+
         #submit {
             margin-top: 1em;
             /* background-color: rgb(143, 143, 143); */
             background-color: rgb(68, 181, 185);
             color: snow;
             border: none;
-            font-family: 'Montserrat',sans-serif;
+            font-family: 'Montserrat', sans-serif;
             padding: 0.9em;
             border-radius: 0.2em;
         }
+
+        /*------------------------------------- Scrool Bar Design------------------------------------------------- */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(#3838389c, #1312127a);
+            border-radius: 6px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(#5ca3a6, #0051ff);
+        }
+
+        /*--------------------------------------- Scrool Bar Design End-------------------------------------------------- */
     </style>
 </head>
+
 <body>
     <!-- <************************************************Header **************************************> -->
 
@@ -273,10 +302,10 @@
 
             <!------------------------------------------ Right Part -------------------------------------------------->
             <div class="midRight">
-                <a href="login.html"><img src="https://cdn2.iconfinder.com/data/icons/e-commerce-line-4-1/1024/user4-128.png"
-                        alt=""></a>
-                <a href="wishlist.html"><img src="https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678087-heart-128.png"
-                        alt=""></a>
+                <a href="login.html"><img
+                        src="https://cdn2.iconfinder.com/data/icons/e-commerce-line-4-1/1024/user4-128.png" alt=""></a>
+                <a href="wishlist.html"><img
+                        src="https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678087-heart-128.png" alt=""></a>
                 <a href="AddToCart.html"><img
                         src="https://cdn1.iconfinder.com/data/icons/shopping-346/24/buy-bag-cart-shop-shopping-128.png"
                         alt=""></a>
@@ -320,6 +349,7 @@
         </div>
     </div>
 </body>
+
 </html>
 
 <script>
@@ -337,17 +367,17 @@
         let password = document.getElementById('password').value;
 
         let userData = {
-            'name' : name,
-            'phone' : phone,
-            'email' : email,
-            'password' : password
+            'name': name,
+            'phone': phone,
+            'email': email,
+            'password': password
         }
 
         userStack.push(userData);
 
-        localStorage.setItem('userDatabase',JSON.stringify(userStack));
+        localStorage.setItem('userDatabase', JSON.stringify(userStack));
 
         window.location.href = "Homepage.html";
     }
-    document.getElementById('submit').addEventListener('click',addUser);
+    document.getElementById('submit').addEventListener('click', addUser);
 </script>

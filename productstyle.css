@@ -197,10 +197,12 @@ input::selection {
           margin-bottom : 0;
           outline : none;
           border : 0px;
+          color: dimgray;
+          font-size: 16px;
         }
 
         .select{
-          border-bottom: 1px solid black;
+          border-bottom: 1px solid dimgray;
         }
 
        

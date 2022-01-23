@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Verify with OTP</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com"> 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;600;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <style>
         /* ---------------------------------------Header CSS Start------------------------------------------------ */
 
@@ -26,6 +27,7 @@
             top: 0;
             left: 0;
             background-color: white;
+            margin-top: -6px;
 
         }
 
@@ -148,7 +150,7 @@
             font-weight: 500;
         }
 
-        #bottomNavbar>a>p:hover{
+        #bottomNavbar>a>p:hover {
             font-weight: bolder;
         }
 
@@ -159,26 +161,31 @@
         }
 
         /*--------------------------------------------------- Header CSS END ---------------------------------------------------------*/
-        
-        html,body {
+
+        html,
+        body {
             height: 100%;
         }
+
         body {
-            background-image: linear-gradient(0deg,#fff4c4,#fff);
+            background-image: linear-gradient(0deg, #fff4c4, #fff);
             text-align: center;
-            font-family: 'Montserrat',sans-serif;
+            font-family: 'Montserrat', sans-serif;
             padding: 0 0 0 0.5em;
         }
-        #container > h4 {
+
+        #container>h4 {
             margin-top: 0;
             font-weight: 800;
         }
-        #container > p {
+
+        #container>p {
             font-size: 0.8rem;
             color: darkgray;
             font-weight: 600;
         }
-        #container > hr {
+
+        #container>hr {
             margin-top: 0;
             margin-bottom: 2em;
             width: 30%;
@@ -187,17 +194,20 @@
             border-right: 0;
             border-bottom: 0.5px solid darkgray;
         }
+
         #container {
             margin: auto;
             padding: 1em 1em 1em 1em;
             background-color: snow;
             width: 85%;
         }
-        #container > #mobile {
+
+        #container>#mobile {
             margin-bottom: 0.2rem;
             font-weight: 800;
         }
-        #container > #otp {
+
+        #container>#otp {
             background-color: transparent;
             border: 0.5px solid darkgray;
             border-top: 0;
@@ -208,14 +218,17 @@
             font-size: 1.5em;
             text-align: center;
         }
-        #container > .text2 {
+
+        #container>.text2 {
             color: rgb(68, 181, 185);
             font-weight: 400;
         }
-        #container > .text3 {
+
+        #container>.text3 {
             margin-top: 2.3em;
             font-size: 0.7em;
         }
+
         .arrow-con {
             border: solid rgb(68, 181, 185);
             border-width: 0 2px 2px 0;
@@ -228,28 +241,48 @@
             transform: rotate(-45deg);
             -webkit-transform: rotate(-45deg);
         }
-        #container > #submit {
+
+        #container>#submit {
             margin-top: 0.8em;
             /* background-color: rgb(143, 143, 143); */
             background-color: #42a2a2;
             color: snow;
             border: none;
-            font-family: 'Montserrat',sans-serif;
+            font-family: 'Montserrat', sans-serif;
             width: 40%;
             padding: 0.9em;
             border-radius: 0.2em;
         }
-        #container > .inv {
+
+        #container>.inv {
             color: transparent;
             margin-top: 0.4em;
             margin-bottom: 1.5em;
             font-size: 0.7em;
         }
-        #container > #inv {
+
+        #container>#inv {
             color: #d24141;
         }
+
+        /*------------------------------------- Scrool Bar Design------------------------------------------------- */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(#3838389c, #1312127a);
+            border-radius: 6px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(#5ca3a6, #0051ff);
+        }
+
+        /*--------------------------------------- Scrool Bar Design End-------------------------------------------------- */
     </style>
 </head>
+
 <body>
 
     <!-- <************************************************Header **************************************> -->
@@ -294,10 +327,10 @@
 
             <!------------------------------------------ Right Part -------------------------------------------------->
             <div class="midRight">
-                <a href="login.html"><img src="https://cdn2.iconfinder.com/data/icons/e-commerce-line-4-1/1024/user4-128.png"
-                        alt=""></a>
-                <a href="wishlist.html"><img src="https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678087-heart-128.png"
-                        alt=""></a>
+                <a href="login.html"><img
+                        src="https://cdn2.iconfinder.com/data/icons/e-commerce-line-4-1/1024/user4-128.png" alt=""></a>
+                <a href="wishlist.html"><img
+                        src="https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678087-heart-128.png" alt=""></a>
                 <a href="AddToCart.html"><img
                         src="https://cdn1.iconfinder.com/data/icons/shopping-346/24/buy-bag-cart-shop-shopping-128.png"
                         alt=""></a>
@@ -335,6 +368,7 @@
         <input type="submit" value="LOGIN" id="submit">
     </div>
 </body>
+
 </html>
 
 <script>
@@ -344,15 +378,15 @@
     function loginWithPass() {
         window.location.href = "loginPass.html";
     }
-    document.getElementById('loginP').addEventListener('click',loginWithPass);
+    document.getElementById('loginP').addEventListener('click', loginWithPass);
 
     function loginWithOtp() {
-        console.log(typeof(document.getElementById('otp').value))
+        console.log(typeof (document.getElementById('otp').value))
         if (document.getElementById('otp').value == "1234") {
             window.location.href = "Homepage.html";
         } else {
-            document.getElementsByClassName('inv')[0].setAttribute('id','inv');
+            document.getElementsByClassName('inv')[0].setAttribute('id', 'inv');
         }
     }
-    document.getElementById('submit').addEventListener('click',loginWithOtp)
+    document.getElementById('submit').addEventListener('click', loginWithOtp)
 </script>
