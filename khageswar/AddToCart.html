@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="AddToCart.css">
+  </head>
+  <body>
+    <din class="cointainer">
+      <!-- -----------------------------------------------Navbar-------------------------------------------------- -->
+      <div class="navbar">
+        <div onclick="window.location.href='Homepage.html'">
+          <img
+            src="https://images.bewakoof.com/web/bewakoof-primary-logo-white-bg-2x-1635745564.png" alt="logo" id="logo"/>
+        </div>
+        <div id="userid">
+          <span></span>
+        </div>
+      </div>
+      <!-- -----------------------------------------------Navbar(↑)-------------------------------------------------- -->
+
+
+
+
+
+      <!-- ----------------------------------------------------when cart is empty-------------------------------------------------- -->
+      <div class="emptyarrdiv">
+        <div id="emptybagdiv">
+          <img src="https://images.bewakoof.com/images/doodles/empty-cart-page-doodle.png" alt="emptycart" id="emptycart"/>
+          <p id="para">Nothing in the bag</p>
+          <button>Continue Shoping</button>
+        </div>
+        <div>
+            <p id="para2">You could try one of these categories:</p>
+            <table id="emptyarrtable">
+                <tr>
+                    <td id="t">Men</td>
+                    <td>   
+                       <p><a href="#">Topwere</a></p> 
+                       <p> <a href="#">Footwear</a></p>
+                    </td>
+                    <td>
+                        <p><a href="#">Bottomwere</a></p>
+                        <p><a href="#">Bestsellers</a></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Women</td>
+                    <td>
+                        <p><a href="#">topwere</a></p>
+                        <p><a href="#">Bestsellers</a></p>
+                    </td>
+                    <td><a href="#">Bottomwere</a></td>
+                </tr>
+                <tr>
+                    <td>Mobile</td>
+                    <td><a href="#">AllMobileCover</a></td>
+                    <td></td>
+                </tr>
+            </table>
+            <img src="https://images.bewakoof.com/web/secure-payments-image.png" alt="">
+        </div>
+      </div>
+ <!-- ----------------------------------------------------when cart is empty(↑)-------------------------------------------------- -->
+   
+    <div class="bodyaddtocart">
+        <div class="cartheader">
+          <h4 id="totalitem"> </h4>
+        </div>
+       <div class="cart">
+
+<!-- -------------------------left box----------------------------- -->
+         <div id="leftdiv">
+            <div class="hedad">
+              <img src="https://images.bewakoof.com/web/Red-truck.png" alt="giftlogo" id="giftlogo">
+              <span>Yay! You get FREE delivery on this order</span>
+            </div>
+            <div class="contein">
+            <!-- <div id="itemdiv">
+              <div id="textdiv">
+                <p>item name</p>
+                <span>price</span> <span id="strik">strike</span>
+                <span style="display: block;">quantity</span>
+                <button style="display: block;" class="cartbtn">Remove</button>
+              </div>
+              <div id="imagediv">
+                <img src="https://images.bewakoof.com/t320/not-so-wine-half-sleeve-t-shirt-449139-1639137598-1.jpg" alt="item image" style="display: block;">
+                <button class="cartbtn" id="movetowish">Move To Wishlist</button>
+              </div>
+            </div> -->
+          </div>
+        </div>
+
+<!-- ---------------------------right box------------------------- -->
+
+        <div id="rightdiv">
+            <div id="righthead">
+              <p>Save extra </p>
+            </div>
+            <div id="cuppon">
+              <span>Get Rs.100 instant discount on your First Purchase above Rs.499. Coupon code - NEW100</span>
+            </div>
+            <div id="havecuppon">
+              <span>Have a Coupon / Referral / Gift Card ?</span>
+              <img src="https://images.bewakoof.com/web/coupon-redeem-arrow-1634641878.png">
+            </div>
+            <div class="summery">
+               <div id="paymenthead">
+                 <h4">Pice summery</h4>
+               </div>
+               <div class="paymentbox">
+                  <div class="paymentboxInner">
+                    <p>Total MRP (Incl. of taxes)</p>
+                    <p id="totalprice">total</p>
+                  </div>
+                  <div class="paymentboxInner">
+                    <p>Delivery Fee</p>
+                    <p style="color: rgb(29, 136, 2);">FREE</p>
+                  </div>
+                  <div class="paymentboxInner">
+                    <p>Bag Discount</p>
+                    <p>Discount</p>
+                  </div>
+                  <div class="paymentboxInner">
+                    <p>Combo Offer Discount</p>
+                    <p>0</p>
+                  </div>
+                  <div class="paymentboxInner">
+                    <p>Subtotal</p>
+                    <p id="subtotal">total</p>
+                  </div>
+                  <div class="saving">
+                    <p>You are saving <span></span> on this order</p>
+                  </div>
+               </div>
+            </div>
+            <div class="paymentfooter">
+              <div>
+                <span>Total</span>
+                <p id="paymenttotal">total</p>
+              </div>
+              <button id="btnadd">Payment</button>
+           </div>
+        </div>
+      </div>
+  
+    </div>
+
+
+  </din>
+
+  <div class="cuppon">
+    <div class="cointa">
+      <div id="close">+</div>
+      <h3>Have a Coupon / Gift Card?</h3>
+      <input type="text" id="code" placeholder="ENTER CODE">
+      <input type="submit" value="APPLY" id="apply">
+    </div>
+  </div>
+
+  </body>
+</html>
+<script>
+  var cartbag = JSON.parse(localStorage.getItem("addtobag")) || [];
+  var wish=JSON.parse(localStorage.getItem("Wishlist")) || [];
+  var cupponarr=[]; 
+  var finalpayment=[];
+  initian(cartbag);
+  createle(cartbag);
+  totalpr(cartbag);
+  function initian(cartbag){
+    if (cartbag.length > 0) {
+    document.querySelector(".emptyarrdiv").style.display="none";
+
+    }else{
+      document.querySelector(".bodyaddtocart").style.display="none";
+      document.querySelector(".emptyarrdiv").style.display="";
+    }
+  };
+
+  function createle(cartbag){
+  document.querySelector(".contein").innerHTML="";
+  cartbag.map(function creatbody(obj,index){
+  var div=document.createElement("div");
+  div.setAttribute("id","itemdiv");
+
+  var div1=document.createElement("div");
+  div1.setAttribute("id","textdiv");
+  var name=document.createElement("p");
+  name.textContent=obj.name;
+  var pri=document.createElement("span");
+  pri.textContent=obj.price+" ";
+  var strikpri=document.createElement("span");
+  strikpri.setAttribute("id","strik");
+  strikpri.textContent=obj.strikedoffprice;
+
+  var qun=document.createElement("span");
+  qun.textContent="Qun:1";
+  qun.style.display="block";
+
+  var remo=document.createElement("button");
+  remo.setAttribute("class","cartbtn");
+  remo.textContent="Remove";
+  remo.style.display="block";
+  remo.addEventListener("click",function(){
+           deleteitem(index);
+      });
+
+  var div2=document.createElement("div");
+  div2.setAttribute("id","imagediv");
+
+  var img=document.createElement("img");
+  img.setAttribute("src",obj.image_url);
+  img.style.display="block";
+
+  var move=document.createElement("button");
+  move.setAttribute("class","cartbtn");
+  move.setAttribute("id","movetowish");
+  move.textContent="Move To Wishlist";
+  move.addEventListener("click",function(){
+           pushitem(obj);
+      });
+
+  div1.append(name,pri,strikpri,qun,remo);
+  div2.append(img,move);
+  div.append(div1,div2);
+  document.querySelector(".contein").append(div);
+  totalitembag(index);
+    })
+  };
+  function deleteitem(index){
+    cartbag.splice(index,1);
+     localStorage.setItem("addtobag",JSON.stringify(cartbag));
+     createle(cartbag);
+     initian(cartbag);
+     totalpr(cartbag)
+  };
+  function pushitem(obj){
+    wish.push(obj);
+    localStorage.setItem("Wishlist",JSON.stringify(wish));
+    alert("Item Added To Wishlist")
+  }
+
+  function totalitembag(index){
+    document.querySelector("#totalitem").textContent=`My Bag ${index+1}item`;
+  }
+  function totalpr(cartbag){
+    var total= cartbag.reduce(function (ac,cv){
+    return ac += Number(cv.price);
+    },0)
+    if(cupponarr.length>0){
+      document.querySelector("#subtotal").textContent=Number(total)-200;
+      document.querySelector("#paymenttotal").textContent=Number(total)-200;
+      finalpayment.push(Number(total)-200);
+      localStorage.setItem("finalpayment",JSON.stringify(finalpayment));
+    }else{
+      document.querySelector("#subtotal").textContent=total;
+      document.querySelector("#paymenttotal").textContent=total;
+      finalpayment.push(total);
+      localStorage.setItem("finalpayment",JSON.stringify(finalpayment));
+    }
+    document.querySelector("#totalprice").textContent=total;
+  }
+  document.querySelector("#havecuppon").addEventListener("click",function (){
+    document.querySelector(".cuppon").style.display="flex";
+  });
+  document.querySelector("#close").addEventListener("click",function (){
+    document.querySelector(".cuppon").style.display="none";
+  });
+  document.querySelector("#apply").addEventListener("click",function (){
+   var code= document.querySelector("#code").value;
+   if(code == "BEWAKOOF6"){
+     alert("Cuoppen code apply succesfully");
+     cupponarr.push("yes");
+     console.log(cupponarr);
+     totalpr(cartbag);
+   }else{
+     alert("This cuppon code is not valid");
+   }
+  });
+  document.querySelector("#btnadd").addEventListener("click",function (){
+    window.location.href="pay.html";
+  })
+</script>
