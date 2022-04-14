@@ -9,7 +9,8 @@ Product section
 Sorting
 Add to Wishlist
 Added coupon option to get 30% off (masai30)
-## Tech Stack: HTML | CSS | JavaScript 
+## Tech Stack: 
+ HTML | CSS | JavaScript 
  ## Areas of responsibility:
 Created Landing page and frontend 
 Collaborated GitHub Repo 
