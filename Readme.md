@@ -2,15 +2,22 @@
 
 A web application to buy great printed clothes and accessories for both men and women.
 
+<br>
 
-## Features:
+## Features: 
 Social Sign-in/Sign-up
 Product section
 Sorting
 Add to Wishlist
 Added coupon option to get 30% off (masai30)
+
+<br>
+
 ## Tech Stack: 
  HTML | CSS | JavaScript 
+ 
+ <br>
+ 
  ## Areas of responsibility:
 Created Landing page and frontend 
 Collaborated GitHub Repo 
