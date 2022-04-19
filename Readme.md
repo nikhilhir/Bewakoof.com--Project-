@@ -1,6 +1,7 @@
 # Bewakoof.com--Project- 
 
 A web application to buy great printed clothes and accessories for both men and women.
+It is a E-Commerce website for Clothes and Assesories.
 
 <br>
 
