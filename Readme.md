@@ -11,12 +11,12 @@ Bewakoof is a lifestyle fashion brand that lets their customers have a hassle-fr
 <br>
 
 ## Features: 
-Landing Page
-Social Sign-in/Sign-up
-Product section
-Sorting
-Add to Wishlist
-Discount coupon option
+- Landing page
+- Social sign-in/sign-up
+- Product section
+- Sort products
+- Add to wishlist
+- Discount coupon option
 
 <br>
 
